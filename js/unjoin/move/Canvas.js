@@ -1,5 +1,7 @@
 // 利用するジオメトリのインポート
 import Box from '../Box.js';
+// 回転させるモジュールのインポート
+import Move from '../../Move.js';
 
 export default class Canvas {
   constructor () {
@@ -72,6 +74,9 @@ export default class Canvas {
   render () {
     // レンダー
     this.renderer.render(this.scene, this.camera);
+
+    // グループ化したMeshを回転させる
+    Move(this.container);
 
     // Statsを表示させる
     document.getElementById('info').innerHTML = JSON.stringify(

@@ -33,7 +33,7 @@ export default class Canvas {
       this.camera.position.set(0, 0, 500);
     }
     { // light の作成
-      this.directionalLight = new THREE.DerectionalLight(0xffffff);
+      this.directionalLight = new THREE.DirectionalLight(0xffffff);
       this.directionalLight.position.set(1, 1, 1);
       this.scene.add(this.directionalLight);
     }
